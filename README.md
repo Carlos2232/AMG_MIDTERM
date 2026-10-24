@@ -1,4 +1,4 @@
-Here is my midterm po. I was late uploading it po
+Here is my midterm po. 
 
 Here po is the Video: https://drive.google.com/drive/folders/1DaNBBKbPH3zhrfYVSSdNiNQcECu0flt9?usp=sharing
 
