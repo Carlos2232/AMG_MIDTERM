@@ -9,7 +9,7 @@ public class HealthBarUI : MonoBehaviour
     public TextMeshProUGUI HPText;
 
     [Header("Lerp Settings")]
-    public float lerpSpeed = 10f; // Speed at which the bar catches up
+    public float lerpSpeed = 10f; 
 
     void Start()
     {
@@ -38,7 +38,6 @@ public class HealthBarUI : MonoBehaviour
         {
             healthSlider.maxValue = playerController.maxHP;
             
-            // Smoothly lerp the slider's value towards the player's current HP
             healthSlider.value = Mathf.Lerp(healthSlider.value, playerController.currentHP, lerpSpeed * Time.deltaTime);
 
             if (HPText != null)
