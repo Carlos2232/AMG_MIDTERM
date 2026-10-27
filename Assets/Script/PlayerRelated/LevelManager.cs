@@ -8,7 +8,7 @@ public class LevelManager : MonoBehaviour
     public static LevelManager Instance;
 
     [Header("Audio Mixer Reference")]
-    public AudioMixer audioMixer; 
+    //public AudioMixer audioMixer; 
 
     [Header("EXP & Level Progress")]
     public int currentLevel = 1;
@@ -87,21 +87,21 @@ public class LevelManager : MonoBehaviour
             levelUpUIPanel.SetActive(true);
         }
 
-        if (AudioManager.Instance != null)
-        {
-            AudioManager.Instance.PlayLevelUpSound();
-        }
+        //if (AudioManager.Instance != null)
+        //{
+        //    AudioManager.Instance.PlayLevelUpSound();
+        //}
 
-        if (audioMixer != null)
-        {
-            float currentDecibels;
-            if (audioMixer.GetFloat("MusicVolume", out currentDecibels))
-            {
-                savedMusicVolumeBeforeLevelUp = Mathf.Pow(10f, currentDecibels / 20f);
-            }
+    //    if (audioMixer != null)
+    //    {
+    //        float currentDecibels;
+    //        if (audioMixer.GetFloat("MusicVolume", out currentDecibels))
+    //        {
+    //            savedMusicVolumeBeforeLevelUp = Mathf.Pow(10f, currentDecibels / 20f);
+    //        }
 
-            audioMixer.SetFloat("MusicVolume", Mathf.Log10(Mathf.Clamp(savedMusicVolumeBeforeLevelUp * 0.3f, 0.0001f, 1f)) * 20f);
-        }
+    //        audioMixer.SetFloat("MusicVolume", Mathf.Log10(Mathf.Clamp(savedMusicVolumeBeforeLevelUp * 0.3f, 0.0001f, 1f)) * 20f);
+    //    }
     }
 
     public void SelectUpgrade(int powerIndex)
@@ -122,10 +122,10 @@ public class LevelManager : MonoBehaviour
                 break;
         }
 
-        if (audioMixer != null)
-        {
-            audioMixer.SetFloat("MusicVolume", Mathf.Log10(Mathf.Clamp(savedMusicVolumeBeforeLevelUp, 0.0001f, 1f)) * 20f);
-        }
+        //if (audioMixer != null)
+        //{
+        //    audioMixer.SetFloat("MusicVolume", Mathf.Log10(Mathf.Clamp(savedMusicVolumeBeforeLevelUp, 0.0001f, 1f)) * 20f);
+        //}
 
         if (levelUpUIPanel != null)
         {

@@ -18,7 +18,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip weapon2Sound;
     public AudioClip weapon3Sound;
     public AudioClip damageSound;
-    public AudioClip levelUpSound;
+    //public AudioClip levelUpSound;
 
     [Header("Game Over & Win SFX")]
     public AudioClip gameOverSound;
@@ -90,10 +90,10 @@ public class AudioManager : MonoBehaviour
     {
         PlaySFX(buttonClickSound);
     }
-    public void PlayLevelUpSound()
-    {
-        PlaySFX(levelUpSound);
-    }
+    //public void PlayLevelUpSound()
+    //{
+    //    PlaySFX(levelUpSound);
+    //}
     public void PlayGameOverSound()
     {
         PlaySFX(gameOverSound);
